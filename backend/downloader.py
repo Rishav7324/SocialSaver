@@ -62,7 +62,7 @@ def _cookies_opts():
 COMMON_OPTS = {
     "quiet": True,
     "no_warnings": True,
-    "js_runtimes": ["node"],
+    "js_runtimes": {"node": {}},
     "remote_components": ["ejs:github"],
     "extractor_args": {"youtube": {"player_client": ["web"]}},
 }
