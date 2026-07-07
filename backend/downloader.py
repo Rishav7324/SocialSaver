@@ -103,6 +103,8 @@ def _extract_item(info: dict) -> dict:
     for f in info.get("formats", []):
         fmt = {
             "format_id": f.get("format_id"),
+            "format": f.get("format"),
+            "format_note": f.get("format_note"),
             "ext": f.get("ext"),
             "vcodec": f.get("vcodec", "none"),
             "acodec": f.get("acodec", "none"),
