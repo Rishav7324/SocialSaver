@@ -54,7 +54,7 @@ def get_media_info(url: str):
         "no_warnings": True,
         "extract_flat": False,
         "ignoreerrors": True,
-        "extractor_args": {"youtube": {"player_client": ["android", "web"]}},
+        "extractor_args": {"youtube": {"player_client": ["android"]}},
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=False)
@@ -152,7 +152,7 @@ def start_async_download(
         "outtmpl": output_template,
         "restrictfilenames": True,
         "progress_hooks": [_make_progress_hook(file_id)],
-        "extractor_args": {"youtube": {"player_client": ["android", "web"]}},
+        "extractor_args": {"youtube": {"player_client": ["android"]}},
     }
 
     if extract_audio:
