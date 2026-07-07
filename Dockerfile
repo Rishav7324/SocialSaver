@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN mkdir -p downloads
+RUN mkdir -p downloads cookies
 
 EXPOSE 8080
 
