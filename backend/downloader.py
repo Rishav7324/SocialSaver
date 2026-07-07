@@ -59,13 +59,20 @@ def _cookies_opts():
     return {}
 
 
+COMMON_OPTS = {
+    "quiet": True,
+    "no_warnings": True,
+    "js_runtimes": ["node"],
+    "remote_components": ["ejs:github"],
+    "extractor_args": {"youtube": {"player_client": ["web"]}},
+}
+
+
 def get_media_info(url: str):
     ydl_opts = {
-        "quiet": True,
-        "no_warnings": True,
+        **COMMON_OPTS,
         "extract_flat": False,
         "ignoreerrors": True,
-        "extractor_args": {"youtube": {"player_client": ["android", "web"]}},
         **_cookies_opts(),
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -228,12 +235,10 @@ def download_media(url: str, format_id: str = None, extract_audio: bool = False)
     file_id = uuid.uuid4().hex
     output_template = str(DOWNLOADS_DIR / f"{file_id}.%(ext)s")
     ydl_opts = {
-        "quiet": True,
-        "no_warnings": True,
+        **COMMON_OPTS,
         "outtmpl": output_template,
         "restrictfilenames": True,
         "progress_hooks": [_make_progress_hook(file_id)],
-        "extractor_args": {"youtube": {"player_client": ["android", "web"]}},
         **_cookies_opts(),
     }
 
