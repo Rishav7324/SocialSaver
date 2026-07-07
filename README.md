@@ -17,7 +17,10 @@
     <a href="#-faq">FAQ</a>
   </p>
   <p>
-    <a href="https://github.com/socialsaver/socialsaver/blob/main/LICENSE">
+    <a href="https://socialsaver.fly.dev/">
+      <img src="https://img.shields.io/badge/live-socialsaver.fly.dev-25b7d3.svg?style=flat-square" alt="Live Site">
+    </a>
+    <a href="https://github.com/Rishav7324/SocialSaver/blob/main/LICENSE">
       <img src="https://img.shields.io/badge/license-MIT-25b7d3.svg?style=flat-square" alt="MIT License">
     </a>
     <a href="https://www.python.org/">
@@ -34,11 +37,11 @@
     </a>
   </p>
   <p>
-    <a href="https://github.com/socialsaver/socialsaver">
-      <img src="https://img.shields.io/github/stars/socialsaver/socialsaver?style=social" alt="GitHub stars">
+    <a href="https://github.com/Rishav7324/SocialSaver">
+      <img src="https://img.shields.io/github/stars/Rishav7324/SocialSaver?style=social" alt="GitHub stars">
     </a>
-    <a href="https://github.com/socialsaver/socialsaver/issues">
-      <img src="https://img.shields.io/github/issues/socialsaver/socialsaver?style=social" alt="GitHub issues">
+    <a href="https://github.com/Rishav7324/SocialSaver/issues">
+      <img src="https://img.shields.io/github/issues/Rishav7324/SocialSaver?style=social" alt="GitHub issues">
     </a>
   </p>
 </div>
@@ -157,7 +160,7 @@ git --version       # Nice to have
 #### Option A: Auto-setup script (recommended)
 
 ```bash
-git clone https://github.com/socialsaver/socialsaver.git
+git clone https://github.com/Rishav7324/SocialSaver.git
 cd socialsaver
 chmod +x run.sh
 ./run.sh start
@@ -172,7 +175,7 @@ The script will:
 #### Option B: Manual setup
 
 ```bash
-git clone https://github.com/socialsaver/socialsaver.git
+git clone https://github.com/Rishav7324/SocialSaver.git
 cd socialsaver
 python3 -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
@@ -553,6 +556,23 @@ Environment=PYTHONUNBUFFERED=1
 WantedBy=multi-user.target
 ```
 
+### &#127754; Fly.io (free tier)
+
+Deploy in minutes with Fly.io's free tier:
+
+```bash
+fly launch --no-deploy
+fly volumes create smed_data --region ams --size 1
+fly deploy
+fly open
+```
+
+See [DEPLOY_FLY_IO.md](DEPLOY_FLY_IO.md) for the full step-by-step guide.
+
+The app will be live at `https://your-app.fly.dev`.
+
+---
+
 ### &#127760; Nginx Reverse Proxy
 
 ```nginx
@@ -808,10 +828,11 @@ copies or substantial portions of the Software.
 ## &#127775; Star History
 
 <div align="center">
+  <p>Try it live: <a href="https://socialsaver.fly.dev/"><strong>socialsaver.fly.dev</strong></a> &#8599;</p>
   <p>If SocialSaver helps you, consider giving it a &#11088; on GitHub &mdash; it helps others discover the project!</p>
   <p>
-    <a href="https://github.com/socialsaver/socialsaver">
-      <img src="https://img.shields.io/github/stars/socialsaver/socialsaver?style=for-the-badge&logo=github" alt="Star on GitHub">
+    <a href="https://github.com/Rishav7324/SocialSaver">
+      <img src="https://img.shields.io/github/stars/Rishav7324/SocialSaver?style=for-the-badge&logo=github" alt="Star on GitHub">
     </a>
   </p>
   <br>
