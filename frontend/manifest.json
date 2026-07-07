@@ -1,0 +1,31 @@
+{
+  "name": "SocialSaver",
+  "short_name": "SocialSaver",
+  "description": "Free, open-source video & audio downloader for 1000+ social media platforms",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0d14",
+  "theme_color": "#25b7d3",
+  "categories": ["multimedia", "utilities", "social"],
+  "lang": "en",
+  "scope": "/",
+  "icons": [
+    { "src": "/icon-48.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "/icon-72.png", "sizes": "72x72", "type": "image/png" },
+    { "src": "/icon-96.png", "sizes": "96x96", "type": "image/png" },
+    { "src": "/icon-128.png", "sizes": "128x128", "type": "image/png" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-384.png", "sizes": "384x384", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "New Download",
+      "short_name": "Download",
+      "description": "Start a new download",
+      "url": "/",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

@@ -27,7 +27,13 @@
     <meta name="twitter:site" content="@socialsaver">
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon-192.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SocialSaver">
     <link rel="stylesheet" href="/styles.css">
 
     <!-- JSON-LD: WebApplication -->
@@ -443,5 +449,10 @@
     </footer>
 
     <script src="/app.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+    </script>
 </body>
 </html>
