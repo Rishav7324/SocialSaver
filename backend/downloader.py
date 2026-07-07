@@ -64,7 +64,6 @@ COMMON_OPTS = {
     "no_warnings": True,
     "js_runtimes": {"node": {}},
     "remote_components": ["ejs:github"],
-    "extractor_args": {"youtube": {"player_client": ["web"]}},
 }
 
 
@@ -174,7 +173,7 @@ def start_async_download(
     }
 
     if extract_audio:
-        ydl_opts["format"] = "bestaudio/best"
+        ydl_opts["format"] = "ba/b"
         ydl_opts["postprocessors"] = [
             {
                 "key": "FFmpegExtractAudio",
@@ -185,7 +184,7 @@ def start_async_download(
     elif format_id:
         ydl_opts["format"] = format_id
     else:
-        ydl_opts["format"] = "bestvideo+bestaudio/best"
+        ydl_opts["format"] = "bv*+ba/b"
 
     logger.info("Downloading %s (id=%s, fmt=%s)", url, file_id, format_id)
 
@@ -242,7 +241,7 @@ def download_media(url: str, format_id: str = None, extract_audio: bool = False)
     }
 
     if extract_audio:
-        ydl_opts["format"] = "bestaudio/best"
+        ydl_opts["format"] = "ba/b"
         ydl_opts["postprocessors"] = [
             {
                 "key": "FFmpegExtractAudio",
@@ -253,7 +252,7 @@ def download_media(url: str, format_id: str = None, extract_audio: bool = False)
     elif format_id:
         ydl_opts["format"] = format_id
     else:
-        ydl_opts["format"] = "bestvideo+bestaudio/best"
+        ydl_opts["format"] = "bv*+ba/b"
 
     logger.info("Downloading %s (format=%s, audio=%s)", url, format_id, extract_audio)
 
