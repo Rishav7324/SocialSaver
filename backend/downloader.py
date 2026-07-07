@@ -166,12 +166,11 @@ def start_async_download(
 
     output_template = str(DOWNLOADS_DIR / f"{file_id}.%(ext)s")
     ydl_opts = {
-        "quiet": True,
-        "no_warnings": True,
+        **COMMON_OPTS,
         "outtmpl": output_template,
         "restrictfilenames": True,
         "progress_hooks": [_make_progress_hook(file_id)],
-        "extractor_args": {"youtube": {"player_client": ["android"]}},
+        **_cookies_opts(),
     }
 
     if extract_audio:
