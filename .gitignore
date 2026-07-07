@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+downloads/
+*.mp4
+*.mp3
+*.webm
+*.mkv
+*.wav
+*.m4a
+*.ogg
+*.jpg
+*.png
+*.gif
+*.webp

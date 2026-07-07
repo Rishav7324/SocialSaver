@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialSaver — Free Video &amp; Audio Downloader for 1000+ Platforms</title>
+    <meta name="description" content="SocialSaver is a free, open-source online downloader for YouTube, TikTok, Instagram, Twitter/X, Facebook, and 1000+ sites. No ads, no sign-up, no limits. Download videos, audio, and playlists instantly.">
+    <meta name="keywords" content="video downloader, youtube downloader, tiktok downloader, instagram downloader, twitter downloader, facebook downloader, online downloader, free downloader, social media downloader, mp4 downloader, mp3 downloader, playlist downloader, open source downloader">
+    <link rel="canonical" href="https://socialsaver.example.com/">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="SocialSaver">
+    <meta name="theme-color" content="#0d0d14">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="SocialSaver — Free Video &amp; Audio Downloader">
+    <meta property="og:description" content="Download videos and audio from 1000+ platforms. Free, open-source, no sign-up required.">
+    <meta property="og:url" content="https://socialsaver.example.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SocialSaver">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SocialSaver — Free Video &amp; Audio Downloader">
+    <meta name="twitter:description" content="Download videos and audio from 1000+ platforms. Free, open-source, no sign-up.">
+    <meta name="twitter:site" content="@socialsaver">
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- JSON-LD: WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "SocialSaver",
+        "url": "https://socialsaver.example.com/",
+        "description": "Free, open-source online downloader for videos and audio from 1000+ social media platforms.",
+        "applicationCategory": "Multimedia",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://socialsaver.example.com/"
+        }]
+    }
+    </script>
+
+    <!-- JSON-LD: FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type":"Question","name":"Is SocialSaver free?","acceptedAnswer":{"@type":"Answer","text":"Yes — 100% free. No sign-up, no subscriptions, no hidden fees. SocialSaver is also open source under the MIT license."}},
+            {"@type":"Question","name":"What platforms do you support?","acceptedAnswer":{"@type":"Answer","text":"1000+ platforms including YouTube, TikTok, Instagram, Twitter/X, Facebook, Reddit, Vimeo, SoundCloud, Twitch, Dailymotion, and many more."}},
+            {"@type":"Question","name":"How do I download a video?","acceptedAnswer":{"@type":"Answer","text":"Copy the URL of the video, paste it into the input field, click Get Info, choose your preferred format, and click Download."}},
+            {"@type":"Question","name":"What formats are available?","acceptedAnswer":{"@type":"Answer","text":"You can download as MP4 video (various resolutions up to 4K), MP3 audio, WebM, and more depending on the source platform."}},
+            {"@type":"Question","name":"Can I download entire playlists?","acceptedAnswer":{"@type":"Answer","text":"Yes! Paste a playlist or channel URL and SocialSaver will list all videos. You can download individual videos or the entire playlist."}},
+            {"@type":"Question","name":"Is my privacy protected?","acceptedAnswer":{"@type":"Answer","text":"We do not log or store your downloaded URLs, and no personal data is collected. See our Privacy Policy for details."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- GitHub banner -->
+    <div class="gh-banner">
+        <a href="https://github.com/socialsaver/socialsaver" target="_blank" rel="noopener">Open Source</a>
+    </div>
+
+    <!-- Nav -->
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <a href="/" class="nav-brand">
+                <svg width="22" height="22" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                    <path fill="#25b7d3" d="M24 47.998c13.255 0 24-10.745 24-24C48 10.746 37.255 0 24 0S0 10.745 0 23.999s10.745 23.999 24 23.999"/>
+                    <path fill="#f0f1f1" d="M37.964 24.871a6.11 6.11 0 0 0-3.83-5.665c-1.78-4.349-4.652-6.116-8.17-6.116a8.5 8.5 0 0 0-7.58 4.642c-2.236-.953-4.756.629-4.85 3.078a5.234 5.234 0 0 0 1.739 10.17h17.455s5.236-.971 5.236-6.109"/>
+                    <path fill="#fff" d="M25.964 13.09a8.5 8.5 0 0 0-7.58 4.642a3.488 3.488 0 0 0-4.85 3.078a5.23 5.23 0 0 0-3.497 4.934a5.234 5.234 0 0 0 4.804 5.214l16.187-16.186c-1.453-1.16-3.163-1.682-5.064-1.682"/>
+                    <path fill="#17b198" d="M28.32 23.236a.58.58 0 0 0-.531-.355H26.3v-4.027a.575.575 0 0 0-.575-.575h-3.451a.575.575 0 0 0-.575.575v4.027h-1.488a.575.575 0 0 0-.407.982l3.777 3.458a.575.575 0 0 0 .814 0l3.8-3.458a.58.58 0 0 0 .124-.627"/>
+                </svg>
+                SocialSaver
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#features" class="nav-desktop">Features</a>
+                <a href="#faq" class="nav-desktop">FAQ</a>
+                <a href="/legal.html#privacy">Privacy</a>
+                <a href="/legal.html#terms">Terms</a>
+                <a href="https://github.com/socialsaver/socialsaver" target="_blank" rel="noopener" class="nav-cta">GitHub</a>
+                <button class="btn-icon-sm" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Hero -->
+        <section class="hero reveal" id="hero">
+            <div class="hero-icon">
+                <svg width="52" height="52" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                    <path fill="#25b7d3" d="M24 47.998c13.255 0 24-10.745 24-24C48 10.746 37.255 0 24 0S0 10.745 0 23.999s10.745 23.999 24 23.999"/>
+                    <path fill="#f0f1f1" d="M37.964 24.871a6.11 6.11 0 0 0-3.83-5.665c-1.78-4.349-4.652-6.116-8.17-6.116a8.5 8.5 0 0 0-7.58 4.642c-2.236-.953-4.756.629-4.85 3.078a5.234 5.234 0 0 0 1.739 10.17h17.455s5.236-.971 5.236-6.109"/>
+                    <path fill="#fff" d="M25.964 13.09a8.5 8.5 0 0 0-7.58 4.642a3.488 3.488 0 0 0-4.85 3.078a5.23 5.23 0 0 0-3.497 4.934a5.234 5.234 0 0 0 4.804 5.214l16.187-16.186c-1.453-1.16-3.163-1.682-5.064-1.682"/>
+                    <path fill="#17b198" d="M28.32 23.236a.58.58 0 0 0-.531-.355H26.3v-4.027a.575.575 0 0 0-.575-.575h-3.451a.575.575 0 0 0-.575.575v4.027h-1.488a.575.575 0 0 0-.407.982l3.777 3.458a.575.575 0 0 0 .814 0l3.8-3.458a.58.58 0 0 0 .124-.627"/>
+                </svg>
+            </div>
+            <h1>Download from <span class="accent">any social platform</span></h1>
+            <p class="subtitle">Paste a URL and save videos, audio, and playlists from 1000+ sites — free, fast, and open-source</p>
+            <div class="hero-badges">
+                <span class="hero-badge">&#9679; No sign-up</span>
+                <span class="hero-badge">&#9679; Unlimited downloads</span>
+                <span class="hero-badge">&#9679; Open source</span>
+                <span class="hero-badge">&#9679; No ads</span>
+            </div>
+        </section>
+
+        <!-- Input -->
+        <section class="input-card reveal" id="inputCard">
+            <div class="input-row">
+                <input type="url" id="urlInput" placeholder="Paste link — YouTube, TikTok, Instagram, Twitter, Facebook..." autofocus spellcheck="false" autocomplete="url">
+                <button class="btn btn-icon" id="pasteBtn" aria-label="Paste from clipboard">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+                </button>
+                <button class="btn btn-primary" id="downloadBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Get Info
+                </button>
+            </div>
+            <p class="supported">Supports YouTube, TikTok, Instagram, Twitter/X, Facebook, Reddit, Vimeo, SoundCloud, and <strong>1000+</strong> more</p>
+        </section>
+
+        <!-- Loader -->
+        <div class="loader hidden" id="loader">
+            <div class="spinner"></div>
+            <span>Fetching info...</span>
+        </div>
+
+        <!-- Error -->
+        <div class="error hidden" id="error"></div>
+
+        <!-- Result -->
+        <div class="hidden" id="result">
+            <div class="media-card fade-in" id="singleResult"></div>
+        </div>
+
+        <!-- Playlist Result -->
+        <div class="hidden" id="playlistResult">
+            <div class="media-card fade-in" id="playlistContent"></div>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-wrap hidden" id="progressWrap">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-info">
+                <span id="progressLabel">Downloading...</span>
+                <span id="progressPercent">0%</span>
+            </div>
+        </div>
+
+        <!-- How it works -->
+        <section class="how-section reveal" id="how">
+            <h2 class="section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                How it works
+            </h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div>
+                        <h4>Copy a link</h4>
+                        <p>From YouTube, TikTok, Instagram, Twitter, Facebook, or any of 1000+ supported sites</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div>
+                        <h4>Paste and get info</h4>
+                        <p>SocialSaver fetches the title, thumbnail, and available formats — video and audio</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div>
+                        <h4>Pick your format</h4>
+                        <p>Choose the quality and format you want, then click Download</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features-section reveal" id="features">
+            <h2 class="section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Why SocialSaver?
+            </h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <div>
+                        <h4>1000+ Platforms</h4>
+                        <p>YouTube, TikTok, Instagram, Twitter, Facebook, Reddit, Vimeo, SoundCloud, Twitch, and many more</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <div>
+                        <h4>100% Free</h4>
+                        <p>No sign-up, no ads, no subscriptions, no hidden fees. Completely free to use</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    </div>
+                    <div>
+                        <h4>Any Format</h4>
+                        <p>Download as MP4, MP3, WebM, and more. Choose quality from 144p up to 4K</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                    <div>
+                        <h4>Playlists Supported</h4>
+                        <p>Paste a playlist or channel URL to see all videos. Download individually or in bulk</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div>
+                        <h4>Privacy First</h4>
+                        <p>We don't log your downloads or store your data. Your privacy is protected</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="16 12 12 8 8 12"/><line x1="12" y1="16" x2="12" y2="8"/></svg>
+                    </div>
+                    <div>
+                        <h4>Open Source</h4>
+                        <p>Built with transparency. MIT licensed — contributions and audits welcome</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supported platforms -->
+        <section class="platforms-section reveal" id="platforms">
+            <h2 class="section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Supported platforms
+            </h2>
+            <div class="platform-grid" id="platformGrid"></div>
+        </section>
+
+        <!-- About -->
+        <section class="about-section reveal" id="about">
+            <div class="about-card">
+                <h3>About SocialSaver</h3>
+                <p>SocialSaver is a <strong>free, open-source</strong> online downloader that lets you save videos, audio, and playlists from virtually any social media platform. Built on <a href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener">yt-dlp</a> and <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI</a>, it supports over 1000 websites including YouTube, TikTok, Instagram, Twitter/X, Facebook, Reddit, Vimeo, SoundCloud, Twitch, Dailymotion, and many more.</p>
+                <p>There are <strong>no ads, no sign-up required, no daily limits</strong>, and no hidden fees. The project is fully open source under the MIT license — contributions are welcome!</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-num">1000+</div>
+                        <div class="stat-label">Platforms</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">100%</div>
+                        <div class="stat-label">Free</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">MIT</div>
+                        <div class="stat-label">License</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech stack -->
+        <section class="tech-section reveal" id="tech">
+            <h2 class="section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Built with
+            </h2>
+            <div class="tech-grid">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">yt-dlp</span>
+                <span class="tech-badge">FFmpeg</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Open Source</span>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section reveal" id="faq">
+            <h2 class="section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Frequently asked questions
+            </h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Is SocialSaver free?</summary>
+                    <p>Yes — 100% free. No sign-up, no subscriptions, no hidden fees. SocialSaver is also <strong>open source</strong> under the MIT license.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What platforms do you support?</summary>
+                    <p><strong>1000+</strong> platforms including YouTube, TikTok, Instagram, Twitter/X, Facebook, Reddit, Vimeo, SoundCloud, Twitch, Dailymotion, and many more. Powered by yt-dlp.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How do I download a video?</summary>
+                    <p>Copy the URL of the video, paste it into the input field above, click <strong>Get Info</strong>, choose your preferred format, and click <strong>Download</strong>. It's that simple!</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What formats are available?</summary>
+                    <p>You can download as <strong>MP4 video</strong> (various resolutions up to 4K), <strong>MP3 audio</strong>, <strong>WebM</strong>, and more depending on what the source platform offers.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I download entire playlists?</summary>
+                    <p>Yes! Paste a playlist or channel URL and SocialSaver will list all videos. You can download individual videos or the entire playlist.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is there a limit on downloads?</summary>
+                    <p>There is no hard limit, but rate limiting is in place to ensure fair usage for everyone (60 requests per minute).</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is my privacy protected?</summary>
+                    <p>We do not log or store your downloaded URLs, and no personal data is collected. See our <a href="/legal.html#privacy">Privacy Policy</a> for details.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I contribute to the project?</summary>
+                    <p>Absolutely! SocialSaver is <strong>open source</strong> on <a href="https://github.com/socialsaver/socialsaver" target="_blank" rel="noopener">GitHub</a>. Feel free to submit issues, feature requests, or pull requests.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Open source -->
+        <section class="oss-section reveal" id="oss">
+            <div class="oss-card">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    Open Source
+                </h3>
+                <p>SocialSaver is released under the <strong>MIT license</strong>. The entire source code is available on GitHub. Contributions, bug reports, and feature requests are always welcome.</p>
+                <div class="oss-links">
+                    <a href="https://github.com/socialsaver/socialsaver" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                        View on GitHub
+                    </a>
+                    <a href="https://github.com/socialsaver/socialsaver/blob/main/README.md" target="_blank" rel="noopener" class="btn btn-ghost">Documentation</a>
+                    <a href="/LICENSE" target="_blank" class="btn btn-ghost">MIT License</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- History -->
+        <div class="history-section hidden reveal" id="historySection">
+            <h2 class="section-title">Recent downloads</h2>
+            <div class="history-list" id="historyList"></div>
+        </div>
+    </main>
+
+    <!-- Toast -->
+    <div class="toast hidden" id="toast"></div>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Cookie consent -->
+    <div class="cookie-bar" id="cookieBar">
+        <p>This site uses minimal local storage for download history and theme preferences. No tracking cookies are used. <a href="/legal.html#privacy">Learn more</a>.</p>
+        <button class="btn btn-primary" id="cookieAccept">Got it</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>SocialSaver</h4>
+                    <p>Free, open-source online downloader for 1000+ social media platforms. Built with transparency and privacy in mind.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <a href="/">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#oss">Open Source</a>
+                    <a href="https://github.com/socialsaver/socialsaver/blob/main/README.md" target="_blank" rel="noopener">Documentation</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="/legal.html#privacy">Privacy Policy</a>
+                    <a href="/legal.html#terms">Terms of Service</a>
+                    <a href="/legal.html#dmca">DMCA Policy</a>
+                    <a href="/LICENSE.html">License</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 SocialSaver. Made with &#9829; for an open web.</span>
+                <div class="footer-social">
+                    <a href="https://github.com/socialsaver/socialsaver" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/app.js"></script>
+</body>
+</html>
